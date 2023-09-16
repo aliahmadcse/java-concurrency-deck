@@ -6,7 +6,7 @@ author: Ali Ahmad
 paginate: true
 backgroundColor: #ffffff
 # backgroundImage: url('https://marp.app/assets/hero-background.svg')
-backgroundImage: url('./background.jpg')
+backgroundImage: url('./assets/background.jpg')
 
 ---
 # **Java Concurrency**
@@ -88,4 +88,82 @@ backgroundImage: url('./background.jpg')
 * A process can spawn multiple threads
 * Unlike process, threads in a process can share the same memory and resources
 
+---
+## **Process with single thread**
+
+![bg right:70% 80%](./assets/process-single-thread.svg)
+
+---
+
+## **Process with multiple threads**
+
+![bg right:70% 80%](./assets/process-with-multiple-threads.svg)
+
+---
+
+## **A Java Application**
+
+* A single process (JVM)
+* Consists of various threads (Garbage collector, main, etc)
+* Application thread - responsible for running the main method
+
+---
+
+## **Threads Creation - The classic way**
+
+* Identify the piece of code, that you want to run in a separate thread
+* Create a Runnable implementation for that task
+---
+
+## **Threads Creation - The classic way**
+
+```java
+public class MyRunnable implements Runnable {
+    
+    @Override
+    public void run() {
+        MyTask.run();
+    }
+}
+```
+---
+
+## **Threads Creation - The classic way**
+
+```java
+Runnable myRunnable = () -> MyTask.run();
+```
+
+---
+
+## **Threads Creation - The classic way**
+
+* Create a thread and pass the runnable to it
+* Start the thread
+
+---
+
+## **Threads Creation - The classic way**
+
+```java
+
+Thread myThread = new Thread(myRunnable);
+
+myThread.start();
+
+```
+---
+
+## **How this works**
+
+* Thread class is just there, defining meta data for the thread
+* JVM calls the underlying OS threading API
+
+---
+## **When does a thread end?**
+
+* When the run method returns
+* When exception is thrown
+
+---
 

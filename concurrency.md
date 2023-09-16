@@ -166,4 +166,50 @@ myThread.start();
 * When exception is thrown
 
 ---
+## **Daemon Threads**
+
+* ## When does the application end?
+
+* When you spawn threads:
+* when the last thread ends
+
+---
+
+## **Daemon Threads**
+
+* Daemon threads are threads that end when the main thread ends
+* Daemon threads are created by calling `setDaemon(true)` on the thread object
+
+---
+## **Daemon Threads**
+```java
+Thread myThread = new Thread(myRunnable);
+myThread.setDaemon(true);
+myThread.start();
+```
+
+---
+
+## **Thread Lifecycles**
+* New
+* Runnable
+* Blocked
+* Waiting
+* Timed Waiting
+* Terminated
+---
+
+## **Thread Lifecycles**
+
+![bg right:70% 80%](./assets/thread-life-cycle.svg)
+
+---
+
+## **Thread States**
+
+* Running vs Runnable?
+
+![bg right:60% 90%](./assets/running-vs-runnable.svg)
+
+---
 

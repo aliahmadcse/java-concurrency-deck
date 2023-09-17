@@ -234,3 +234,25 @@ myThread.start();
 
 ---
 
+## **Stopping a thread**
+* `Thread.stop()` - deprecated
+* There is no way to stop a thread
+* Threads can be interrupted while running
+
+---
+
+## **Synchronization**
+* Concurrent programming works seemslessly when there is no shared state
+
+* What if there is a shared state b/w different threads?
+
+---
+
+## **Synchronization**
+
+![bg right:70% 80%](./assets/processor-model.svg)
+
+---
+
+## **Synchronization - Race Conditions**
+

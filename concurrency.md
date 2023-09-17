@@ -170,14 +170,14 @@ myThread.start();
 
 * ## When does the application end?
 
-* When you spawn threads:
-* when the last thread ends
+* When you spawn threads, it ends when all the threads end
 
 ---
 
 ## **Daemon Threads**
 
 * Daemon threads are threads that end when the main thread ends
+* Do not want a thread to extend beyound the lifecycle of the application, create a daemon thread
 * Daemon threads are created by calling `setDaemon(true)` on the thread object
 
 ---
@@ -210,6 +210,27 @@ myThread.start();
 * Running vs Runnable?
 
 ![bg right:60% 90%](./assets/running-vs-runnable.svg)
+
+---
+
+## **Joining Threads**
+* Make a thread wait for other thread to complete
+* `join()` method on the thread object
+* Threads can be interrupted while waiting
+* Kind of a sleep, but instead of waiting for some ms, it waits for another thread status to be complete
+
+---
+
+## **Joining Threads**
+
+![bg right:70% 80%](./assets/joining-threads.svg)
+
+---
+
+## **Thread Sleep**
+
+* `Thread.sleep()` - puts the thread in waiting or timed waiting state
+* Thread can be interrupted while sleeping
 
 ---
 

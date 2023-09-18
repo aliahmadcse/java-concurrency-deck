@@ -241,18 +241,47 @@ myThread.start();
 
 ---
 
-## **Synchronization**
+## **Race Conditions**
 * Concurrent programming works seemslessly when there is no shared state
 
 * What if there is a shared state b/w different threads?
 
 ---
 
-## **Synchronization**
+## **Race Conditions**
 
-![bg right:70% 80%](./assets/processor-model.svg)
+* Predictability?
+
+![bg right:60% 80%](./assets/processor-model.svg)
 
 ---
 
-## **Synchronization - Race Conditions**
+## **Synchronization - A Solution**
 
+* Make sure two threads don't simultaneously access a critical data element
+* Lock and Key Model
+* Locking the critical section and thread Safety
+
+---
+## **Synchronization - A Solution**
+
+```java
+public void increment() {
+
+    isolateThis {
+        this.increment++;
+    }
+}
+
+```
+---
+## **Locking the declarative way**
+    
+```java
+    public void increment() {
+
+        synchronized(this) {
+            this.increment++;
+        }
+    }
+```

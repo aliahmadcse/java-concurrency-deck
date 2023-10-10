@@ -529,3 +529,62 @@ if (lock.tryLock(10L, TimeUnit.SECONDS)) {
 * Single thread executor
 
 ---
+## **Callable**
+* Similar to runnable but returns a value
+
+```java
+public interface Callable<V> {
+    V call() throws Exception;
+}
+```
+---
+## **Future Type**
+* Represents the result of an asynchronous computation
+
+* Can be used to check if the computation is complete, to wait for its completion and to retrieve the result of the computation
+
+---
+## **Completeable Future**
+
+* Quite an elegent API for performing asynchronous task
+
+```java
+public static void main(){
+    
+    CompletableFuture.supplyAsync(() -> "hello")
+    .thenAccept(s -> System.out::println)
+}
+```
+---
+
+## **Semaphors**
+* They are locks, but with a slight twist
+* Lets you do **Permit-based, access**
+* You can define, how many thread can execute a block of code concurrently
+* Used for managing limited resources, like access to a file
+
+---
+## **Semaphor**
+* Demo
+
+---
+
+## **Fork Join**
+
+* Divide and Conquer
+* It recursively break down a problem, and solve each part separately
+
+## **Fork Join**
+
+```
+if (my portion of work is small enough)
+    do the work directly
+    
+else
+    split my work into two pieces
+    invoke the two pieces and wait for the results
+```
+
+---
+
+

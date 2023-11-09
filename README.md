@@ -1,13 +1,27 @@
 ## Java Concurrency Deck
 
-### Serve the deck
+## Setting up...
+
+### Install the marp cli
+
+```bash
+npm install -g @marp-team/marp-cli
+```
+
+### Serve the Deck
 
 ```bash
 $ marp -s ./
 ```
 
-### Watch Mode
+### Serve in Watch Mode
 
 ```bash
 $ marp -w ./concurrency.md
+```
+
+### Export the Deck
+
+```bash
+marp concurrency.md -o converted.pdf --allow-local-files
 ```

@@ -43,7 +43,7 @@ backgroundImage: url('./assets/background.jpg')
 - Callables and Future
 - Semaphores
 - Fork Join framework
-- _Virtual Thread_
+<!-- - _Virtual Thread_ -->
 
 ---
 
@@ -164,7 +164,8 @@ myThread.start();
 ```
 
 ---
-
+## **Demo**
+---
 ## **How this works**
 
 - Thread class is just there, defining meta data for the thread
@@ -579,7 +580,7 @@ public static void main(){
 ```
 if (my portion of work is small enough)
     do the work directly
-    
+
 else
     split my work into two pieces
     invoke the two pieces and wait for the results

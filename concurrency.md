@@ -13,7 +13,7 @@ backgroundImage: url('./assets/background.jpg')
 
 ---
 
-## **Agenda**
+## **Plan**
 
 - Threads
 - Process
@@ -24,7 +24,7 @@ backgroundImage: url('./assets/background.jpg')
 
 ---
 
-## **Agenda**
+## **Plan**
 
 - Race conditions
 - Synchronization
@@ -34,7 +34,7 @@ backgroundImage: url('./assets/background.jpg')
 
 ---
 
-## **Agenda**
+## **Plan**
 
 - Advanced concurrency APIs
 - Unstructured locks
@@ -43,9 +43,17 @@ backgroundImage: url('./assets/background.jpg')
 - Callables and Future
 - Semaphores
 - Fork Join framework
-<!-- - _Virtual Thread_ -->
 
 ---
+
+## **Plan**
+- Virtual Threads
+- Structured Concurrency
+- Building a Web Server
+- Concurrency in Golang
+
+---
+
 
 ## **Thread**
 
